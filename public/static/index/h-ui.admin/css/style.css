@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* 你自己的样式 */
+
+.page-bootstrap {
+  text-align: center;
+  margin: 15px 0;
+}
+.page-bootstrap li {
+  display: inline-block;
+}
+.page-bootstrap li a,
+.page-bootstrap li span {
+  color: #666;
+  border: 1px solid #ccc;
+  width: 30px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  display: inline-block;
+  margin: 3px;
+}
+.page-bootstrap li a:hover {
+  background-color: #5a98de;
+  text-decoration: none;
+}
+.page-bootstrap li.active span {
+  background: #5a98de;
+  color: #fff;
+}
+.page-bootstrap li.disabled span {
+  background: #e0e0e0;
+}

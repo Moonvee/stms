@@ -1,0 +1,64 @@
+{extend name="template/base" /}
+{block name="content"}
+<div class="page-container">
+    {include file="form" /}
+    <div class="cl pd-5 bg-1 bk-gray">
+        <span class="l">
+            {tp:menu menu="add,forbid,resume,delete,recyclebin" /}
+        </span>
+        <span class="r pt-5 pr-5">
+            共有数据 ：<strong>{$count ?? '0'}</strong> 条
+        </span>
+    </div>
+    <table class="radius table table-border table-bordered table-hover table-bg mt-20">
+        <thead>
+        <tr class="text-c">
+            {include file="th" /}
+            <th width="100">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        {volist name="list" id="vo"}
+        <tr class="text-c">
+            {include file="td" /}
+            <td class="f-14">
+                {$vo.status|show_status1=$vo.id}
+                {tp:menu menu='sedit' /}
+                {tp:menu menu='sdelete' /}
+            </td>
+        </tr>
+        {/volist}
+        </tbody>
+    </table>
+    <div class="page-bootstrap">{$page ?? ''}</div>
+</div>
+{/block}
+{block name="script"}
+<script type="text/javascript">
+  /**
+   * 恢复禁用等状态改变回调函数
+   * @param ret
+   * @param obj
+   * @param type
+   */
+  function change_status(ret, obj, type) {
+      //配置数据，TYPE:['下一状态文字描述','当前状态class颜色','下一状态class颜色','下一状态方法名','状态标签选择器','下一状态标签icon','下一状态标签title']
+      var data = {
+          'resume1': ['已测试', 'warning', 'success', 'forbid1', '.status', '&#xe615;', '未测试'],
+          'forbid1': ['未测试', 'success', 'warning', 'resume1', '.status', '&#xe631;', '已测试']
+      };
+      var $this = $(obj);
+      $this.html(data[type][0])
+          .attr("title", "点击" + data[type][0])
+          .removeClass("label-" + data[type][1])
+          .addClass("label-" + data[type][2])
+          .attr("onclick", $this.attr("onclick").replace(new RegExp(type, 'g'), data[type][3]));
+      $this.parents("tr")
+          .find(data[type][4])
+          .html(data[type][5])
+          .removeClass("c-" + data[type][1])
+          .addClass("c-" + data[type][2])
+          .attr("title", data[type][6]);
+  }
+</script>
+{/block}

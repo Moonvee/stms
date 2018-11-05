@@ -1,0 +1,633 @@
+[ 2018-11-01T07:45:50+08:00 ] ::1 ::1 GET /
+[ log ] stms.com/ [运行时间：0.095597s][吞吐率：10.46req/s] [内存消耗：1,576.41kb] [文件加载：55]
+[ info ] [ LANG ] /Users/moonvee/Project/website/Stms/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /Users/moonvee/Project/website/Stms/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'purpose' => 'prefetch',
+  'connection' => 'keep-alive',
+  'host' => 'stms.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /Users/moonvee/Project/website/Stms/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /Users/moonvee/Project/website/Stms/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-11-01T07:45:51+08:00 ] ::1 ::1 GET /
+[ log ] stms.com/ [运行时间：0.080186s][吞吐率：12.47req/s] [内存消耗：1,576.84kb] [文件加载：55]
+[ info ] [ LANG ] /Users/moonvee/Project/website/Stms/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /Users/moonvee/Project/website/Stms/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=8cea7168a6f5a13dc7552d307116e013',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'stms.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /Users/moonvee/Project/website/Stms/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /Users/moonvee/Project/website/Stms/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-11-01T07:45:53+08:00 ] ::1 ::1 GET /index/user/login.html
+[ log ] stms.com/index/user/login.html [运行时间：0.065505s][吞吐率：15.27req/s] [内存消耗：1,591.88kb] [文件加载：54]
+[ info ] [ LANG ] /Users/moonvee/Project/website/Stms/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /Users/moonvee/Project/website/Stms/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=8cea7168a6f5a13dc7552d307116e013; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://stms.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'stms.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\User->login[ /Users/moonvee/Project/website/Stms/application/index/controller/User.php ]
+[ info ] [ VIEW ] /Users/moonvee/Project/website/Stms/public/../application/index/view/user/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-11-01T07:45:53+08:00 ] ::1 ::1 GET /captcha.html
+[ log ] stms.com/captcha.html [运行时间：0.260972s][吞吐率：3.83req/s] [内存消耗：1,210.16kb] [文件加载：42]
+[ info ] [ LANG ] /Users/moonvee/Project/website/Stms/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /Users/moonvee/Project/website/Stms/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=8cea7168a6f5a13dc7552d307116e013; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://stms.com/index/user/login.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'stms.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '',
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ /Users/moonvee/Project/website/Stms/vendor/topthink/think-captcha/src/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-11-01T07:45:56+08:00 ] ::1 ::1 GET /teacher/user/login.html
+[ log ] stms.com/teacher/user/login.html [运行时间：0.051146s][吞吐率：19.55req/s] [内存消耗：1,584.29kb] [文件加载：55]
+[ info ] [ LANG ] /Users/moonvee/Project/website/Stms/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /Users/moonvee/Project/website/Stms/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'teacher',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=8cea7168a6f5a13dc7552d307116e013; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://stms.com/index/user/login.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'stms.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\teacher\controller\User->login[ /Users/moonvee/Project/website/Stms/application/teacher/controller/User.php ]
+[ info ] [ VIEW ] /Users/moonvee/Project/website/Stms/public/../application/teacher/view/user/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-11-01T07:45:56+08:00 ] ::1 ::1 GET /captcha.html
+[ log ] stms.com/captcha.html [运行时间：0.096588s][吞吐率：10.35req/s] [内存消耗：1,210.31kb] [文件加载：42]
+[ info ] [ LANG ] /Users/moonvee/Project/website/Stms/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /Users/moonvee/Project/website/Stms/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=8cea7168a6f5a13dc7552d307116e013; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://stms.com/teacher/user/login.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'stms.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '',
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ /Users/moonvee/Project/website/Stms/vendor/topthink/think-captcha/src/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-11-01T07:46:03+08:00 ] ::1 ::1 POST /teacher/user/checklogin.html
+[ log ] stms.com/teacher/user/checklogin.html [运行时间：0.163708s][吞吐率：6.11req/s] [内存消耗：2,422.07kb] [文件加载：60]
+[ info ] [ LANG ] /Users/moonvee/Project/website/Stms/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /Users/moonvee/Project/website/Stms/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'teacher',
+    1 => 'user',
+    2 => 'checklogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=8cea7168a6f5a13dc7552d307116e013; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://stms.com/teacher/user/login.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://stms.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '37',
+  'connection' => 'keep-alive',
+  'host' => 'stms.com',
+)
+[ info ] [ PARAM ] array (
+  'tid' => '10001',
+  'password' => '123456',
+  'verify' => '2432',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\teacher\controller\User->checkLogin[ /Users/moonvee/Project/website/Stms/application/teacher/controller/User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029593s ] mysql:dbname=stms;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_info_t` [ RunTime:0.027191s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_info_t` WHERE  `tid` = '10001'  AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1 [ RunTime:0.007955s ]
+
+---------------------------------------------------------------
+[ 2018-11-01T07:46:03+08:00 ] ::1 ::1 GET /teacher/index/index.html
+[ log ] stms.com/teacher/index/index.html [运行时间：0.036033s][吞吐率：27.75req/s] [内存消耗：1,580.65kb] [文件加载：55]
+[ info ] [ LANG ] /Users/moonvee/Project/website/Stms/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /Users/moonvee/Project/website/Stms/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'teacher',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=8cea7168a6f5a13dc7552d307116e013; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://stms.com/teacher/user/login.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'stms.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\teacher\controller\Index->index[ /Users/moonvee/Project/website/Stms/application/teacher/controller/Index.php ]
+[ info ] [ VIEW ] /Users/moonvee/Project/website/Stms/public/../application/teacher/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-11-01T07:46:03+08:00 ] ::1 ::1 GET /teacher/index/welcome.html
+[ log ] stms.com/teacher/index/welcome.html [运行时间：0.043580s][吞吐率：22.95req/s] [内存消耗：1,527.66kb] [文件加载：54]
+[ info ] [ LANG ] /Users/moonvee/Project/website/Stms/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /Users/moonvee/Project/website/Stms/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'teacher',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=8cea7168a6f5a13dc7552d307116e013; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://stms.com/teacher/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'stms.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\teacher\controller\Index->welcome[ /Users/moonvee/Project/website/Stms/application/teacher/controller/Index.php ]
+[ info ] [ VIEW ] /Users/moonvee/Project/website/Stms/public/../application/teacher/view/index/welcome.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-11-01T07:46:05+08:00 ] ::1 ::1 GET /teacher/teacher/testup.html
+[ log ] stms.com/teacher/teacher/testup.html [运行时间：0.077103s][吞吐率：12.97req/s] [内存消耗：2,528.43kb] [文件加载：62]
+[ info ] [ LANG ] /Users/moonvee/Project/website/Stms/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /Users/moonvee/Project/website/Stms/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'teacher',
+    1 => 'teacher',
+    2 => 'testup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=8cea7168a6f5a13dc7552d307116e013; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://stms.com/teacher/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'stms.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\teacher\controller\Teacher->testUp[ /Users/moonvee/Project/website/Stms/application/teacher/controller/Teacher.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/moonvee/Project/website/Stms/public/../application/teacher/view/teacher/test_up.html [ array (
+  0 => 'testList',
+  1 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000852s ] mysql:dbname=stms;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_test_t` [ RunTime:0.004215s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_test_t` WHERE  `tid` = '10001' ORDER BY id desc [ RunTime:0.002087s ]
+
+---------------------------------------------------------------
+[ 2018-11-01T07:46:09+08:00 ] ::1 ::1 GET /teacher/teacher/testadd.html
+[ log ] stms.com/teacher/teacher/testadd.html [运行时间：0.052733s][吞吐率：18.96req/s] [内存消耗：1,842.45kb] [文件加载：58]
+[ info ] [ LANG ] /Users/moonvee/Project/website/Stms/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /Users/moonvee/Project/website/Stms/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'teacher',
+    1 => 'teacher',
+    2 => 'testadd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=8cea7168a6f5a13dc7552d307116e013; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://stms.com/teacher/teacher/testup.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'stms.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\teacher\controller\Teacher->testAdd[ /Users/moonvee/Project/website/Stms/application/teacher/controller/Teacher.php ]
+[ info ] [ VIEW ] /Users/moonvee/Project/website/Stms/public/../application/teacher/view/teacher/test_add.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-11-01T07:46:13+08:00 ] ::1 ::1 GET /teacher/teacher/stulist.html
+[ log ] stms.com/teacher/teacher/stulist.html [运行时间：0.126642s][吞吐率：7.90req/s] [内存消耗：2,411.67kb] [文件加载：64]
+[ info ] [ LANG ] /Users/moonvee/Project/website/Stms/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /Users/moonvee/Project/website/Stms/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'teacher',
+    1 => 'teacher',
+    2 => 'stulist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; cid=30; PHPSESSID=8cea7168a6f5a13dc7552d307116e013; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://stms.com/teacher/teacher/testup.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'stms.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\teacher\controller\Teacher->stuList[ /Users/moonvee/Project/website/Stms/application/teacher/controller/Teacher.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/moonvee/Project/website/Stms/public/../application/teacher/view/teacher/stu_list.html [ array (
+  0 => 'id',
+  1 => 'testList',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000776s ] mysql:dbname=stms;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_test_s` [ RunTime:0.003644s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_test_s` WHERE  `cid` = 30 ORDER BY `id`  desc [ RunTime:0.004863s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_test_s` WHERE  `cid` = 30 LIMIT 1 [ RunTime:0.005414s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_test_s` WHERE  `cid` = 30 LIMIT 0,10 [ RunTime:0.000666s ]
+
+---------------------------------------------------------------
+[ 2018-11-01T07:46:14+08:00 ] ::1 ::1 GET /teacher/teacher/seestuscore.html
+[ log ] stms.com/teacher/teacher/seestuscore.html [运行时间：0.144325s][吞吐率：6.93req/s] [内存消耗：2,303.98kb] [文件加载：60]
+[ info ] [ LANG ] /Users/moonvee/Project/website/Stms/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /Users/moonvee/Project/website/Stms/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'teacher',
+    1 => 'teacher',
+    2 => 'seestuscore',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; cid=30; oid=12; PHPSESSID=8cea7168a6f5a13dc7552d307116e013; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://stms.com/teacher/teacher/stulist.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'stms.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\teacher\controller\Teacher->seeStuScore[ /Users/moonvee/Project/website/Stms/application/teacher/controller/Teacher.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/moonvee/Project/website/Stms/public/../application/teacher/view/teacher/stu_score.html [ array (
+  0 => 'scoreList',
+  1 => 'title',
+  2 => 'bmiList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003794s ] mysql:dbname=stms;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_test_pe` [ RunTime:0.013080s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_test_pe` WHERE  `id` = 12 LIMIT 1 [ RunTime:0.013229s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_info_s` [ RunTime:0.005993s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_info_s` WHERE  `sid` = '2015984120317' LIMIT 1 [ RunTime:0.002405s ]
+
+---------------------------------------------------------------
+[ 2018-11-01T07:46:17+08:00 ] ::1 ::1 GET /teacher/teacher/addstuscore.html
+[ log ] stms.com/teacher/teacher/addstuscore.html [运行时间：0.096273s][吞吐率：10.39req/s] [内存消耗：2,354.05kb] [文件加载：61]
+[ info ] [ LANG ] /Users/moonvee/Project/website/Stms/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /Users/moonvee/Project/website/Stms/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'teacher',
+    1 => 'teacher',
+    2 => 'addstuscore',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; cid=30; oid=12; sid=2015984120317; PHPSESSID=8cea7168a6f5a13dc7552d307116e013; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://stms.com/teacher/teacher/stulist.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'stms.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\teacher\controller\Teacher->addStuScore[ /Users/moonvee/Project/website/Stms/application/teacher/controller/Teacher.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/moonvee/Project/website/Stms/public/../application/teacher/view/teacher/edit_stu_score.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000771s ] mysql:dbname=stms;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_test_pe` [ RunTime:0.007188s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_test_pe` WHERE  `sid` = '2015984120317' LIMIT 1 [ RunTime:0.000897s ]
+
+---------------------------------------------------------------
+[ 2018-11-01T07:46:22+08:00 ] ::1 ::1 GET /teacher/teacher/seestuscore.html
+[ log ] stms.com/teacher/teacher/seestuscore.html [运行时间：0.087369s][吞吐率：11.45req/s] [内存消耗：2,288.15kb] [文件加载：60]
+[ info ] [ LANG ] /Users/moonvee/Project/website/Stms/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /Users/moonvee/Project/website/Stms/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'teacher',
+    1 => 'teacher',
+    2 => 'seestuscore',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; cid=30; sid=2015984120317; oid=0; PHPSESSID=8cea7168a6f5a13dc7552d307116e013; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://stms.com/teacher/teacher/stulist.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'stms.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\teacher\controller\Teacher->seeStuScore[ /Users/moonvee/Project/website/Stms/application/teacher/controller/Teacher.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/moonvee/Project/website/Stms/public/../application/teacher/view/teacher/stu_score0.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000806s ] mysql:dbname=stms;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_test_pe` [ RunTime:0.005599s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_test_pe` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.001709s ]
+
+---------------------------------------------------------------

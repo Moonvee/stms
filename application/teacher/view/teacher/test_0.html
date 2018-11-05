@@ -1,0 +1,44 @@
+{extend name='public/base' /}
+
+{block name='seo' /}
+<title>{$title|default='标题'}</title>
+
+{/block}
+
+{block name='content' /}
+
+<div class="page-container">
+	<table class="table table-border table-bordered table-bg mt-5 radius">
+		<thead>
+			<tr>
+				<th colspan="2" scope="col">测试管理</th>
+			</tr>
+		</thead>
+		<tr>
+			<td>您还没有创建考试，单击添加按钮创建！</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="l">
+			    <a href="javascript:;" onclick="test_add('添加测试','{:url("teacher/testadd")}','800','600')" class="btn btn-primary radius">
+			      <i class="Hui-iconfont">&#xe6df;</i> 添加测试</a>
+			   </span>
+			 </td>
+		</tr>
+	</table>
+</div>
+
+{/block}
+
+{block name='script'}
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript">
+function test_add(title,url,w,h){
+	layer_show(title,url,w,h);
+}
+</script>
+
+<!--/请在上方写此页面业务相关的脚本-->
+{/block}
+</body>
+</html>

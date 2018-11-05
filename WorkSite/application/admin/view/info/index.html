@@ -1,0 +1,61 @@
+{extend name="template/base" /}
+{block name="content"}
+<div class="page-container">
+    <table class="table table-border table-bordered table-hover table-bg">
+      <thead>
+        <tr>
+          <th colspan="2" scope="col">个人信息</th>
+        </tr>
+      </thead>
+				{volist name="studentInfo" id="vo"}
+      <tbody>
+        <tr>
+          <td width="30%">学号</td>
+          <td><span id="lbServerName">{$vo.account}</span></td>
+        </tr>
+        <tr>
+          <td>姓名</td>
+          <td>{$Think.session.real_name}</td>
+        </tr>
+        <tr>
+          <td>学院</td>
+          <td>{$vo.xueyuan}</td>
+        </tr>
+        <tr>
+          <td>专业</td>
+          <td>{$vo.zhuanye}</td>
+        </tr>
+        <tr>
+          <td>年级</td>
+          <td>{$vo.nianji}</td>
+        </tr>
+        <tr>
+          <td>班级</td>
+          <td>{$vo.banji}</td>
+        </tr>
+        <tr>
+          <td>辅导员</td>
+          <td>{$vo.fudaoyuan}</td>
+        </tr>
+        <tr>
+          <td>籍贯</td>
+          <td>{$vo.jiguan}</td>
+        </tr>
+        <tr>
+          <td>家庭地址</td>
+          <td>{$vo.dizhi}</td>
+        </tr>
+        <tr>
+          <td>操作</td>
+          <td>{tp:menu menu='sedit' /}</td>
+        </tr>
+      </tbody>
+			{/volist}
+    </table>
+</div>
+{/block}
+
+{block name='script'}
+<!--请在下方写此页面业务相关的脚本-->
+<!--/请在上方写此页面业务相关的脚本-->
+{/block}

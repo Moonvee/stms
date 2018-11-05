@@ -1,0 +1,40 @@
+{extend name="template/base" /}
+{block name="content"}
+<div class="page-container">
+
+    <table class="radius table table-border table-bordered table-hover table-bg mt-10">
+        <thead>
+        <tr class="text-c">
+            <th width="25"><input type="checkbox"></th>
+            <th width="">学院</th>
+            <th width="">预约状态</th>
+            <th width="150">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        {volist name="list" id="vo"}
+        <tr class="text-c">
+            <td><input type="checkbox" name="id[]" value="{$vo.id}"></td>
+            <td>{$vo.xueyuan}</td>
+            
+            <td>
+                {eq name="$vo.auth" value="系统关闭中"}
+                <span class="label label-danger radius">系统关闭中</span>
+                {/eq} 
+                {eq name="$vo.auth" value="系统开启"}
+                <span class="label label-success radius">系统开启</span>
+                {/eq}
+            </td>
+
+           
+            <td class="f-14">
+                {tp:menu menu='sedit' /}
+            </td>
+        </tr>
+        {/volist}
+        </tbody>
+    </table>
+    <div class="page-bootstrap">{$page ?? ''}</div>
+</div>
+{/block}
+

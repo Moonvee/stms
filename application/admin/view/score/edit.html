@@ -1,0 +1,162 @@
+{extend name="template/base" /}
+{block name="content"}
+<div class="page-container">
+    <form class="form form-horizontal" id="form" method="post" action="{:\\think\\Request::instance()->baseUrl()}">
+        <input type="hidden" name="id" value="{$vo.id ?? ''}">
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>学号：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" placeholder="学号" name="sid" value="{$vo.sid ?? ''}"  datatype="*" nullmsg="请填写学号">
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>学年：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" placeholder="学年" name="xuenian" value="{$vo.xuenian ?? ''}"  datatype="*" nullmsg="请填写学年">
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>身高：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" placeholder="身高" name="shengao" value="{$vo.shengao ?? ''}"  datatype="*" nullmsg="请填写身高">
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>体重：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" placeholder="体重" name="tizhong" value="{$vo.tizhong ?? ''}"  datatype="*" nullmsg="请填写体重">
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>肺活量：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" placeholder="肺活量" name="feihuoliang" value="{$vo.feihuoliang ?? ''}"  datatype="*" nullmsg="请填写肺活量">
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>1000/800米：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" placeholder="1000/800米" name="lrun" value="{$vo.lrun ?? ''}"  datatype="*" nullmsg="请填写1000/800米">
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>400米：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" placeholder="400米" name="mrun" value="{$vo.mrun ?? ''}"  datatype="*" nullmsg="请填写400米">
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>8*50米：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" placeholder="8*50米" name="srun" value="{$vo.srun ?? ''}"  datatype="*" nullmsg="请填写8*50米">
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>引体向上：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" placeholder="引体向上/仰卧起坐" name="yinti" value="{$vo.yintiyangwo ?? ''}"  datatype="*" nullmsg="请填写引体向上/仰卧起坐">
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>坐位体前屈：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" placeholder="坐位体前屈" name="qianqu" value="{$vo.qianqu ?? ''}"  datatype="*" nullmsg="请填写坐位体前屈">
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>50米：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" placeholder="50米" name="run50" value="{$vo.run50 ?? ''}"  datatype="*" nullmsg="请填写50米">
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>立定跳：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" placeholder="立定跳" name="liding" value="{$vo.liding ?? ''}"  datatype="*" nullmsg="请填写立定跳">
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>跳绳：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" placeholder="跳绳" name="tiaosheng" value="{$vo.tiaosheng ?? ''}"  datatype="*" nullmsg="请填写跳绳">
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>测试状态：</label>
+            <div class="formControls col-xs-6 col-sm-6 skin-minimal">
+              <div class="radio-box">
+                <input type="radio" name="status" id="status-0" value="0" datatype="*" nullmsg="请选择测试状态">
+                <label for="status-0">未测试</label>
+              </div>
+              <div class="radio-box">
+                <input type="radio" name="status" id="status-1" value="1" datatype="*" nullmsg="请选择测试状态">
+                <label for="status-1">已测试</label>
+              </div>
+              <div class="radio-box">
+                <input type="radio" name="status" id="status-2" value="2" datatype="*" nullmsg="请选择测试状态">
+                <label for="status-2">免测</label>
+              </div>
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">测试时间：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" placeholder="测试时间" name="cssj" value="{$vo.cssj ?? ''}" >
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">免测编号：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" placeholder="免测编号" name="mcbh" value="{$vo.mcbh ?? ''}" >
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                <button type="submit" class="btn btn-primary radius">&nbsp;&nbsp;提交&nbsp;&nbsp;</button>
+                <button type="button" class="btn btn-default radius ml-20" onClick="layer_close();">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+            </div>
+        </div>
+    </form>
+</div>
+{/block}
+{block name="script"}
+<script type="text/javascript" src="__LIB__/Validform/5.3.2/Validform.min.js"></script>
+<script>
+    $(function () {
+        $("[name='status'][value='{$vo.status ?? '1'}']").attr("checked", true);
+        $("[name='status'][value='{$vo.status ?? '1'}']").attr("checked",true);
+
+        $('.skin-minimal input').iCheck({
+            checkboxClass: 'icheckbox-blue',
+            radioClass: 'iradio-blue',
+            increaseArea: '20%'
+        });
+
+        $("#form").Validform({
+            tiptype: 2,
+            ajaxPost: true,
+            showAllError: true,
+            callback: function (ret){
+                ajax_progress(ret);
+            }
+        });
+    })
+</script>
+{/block}

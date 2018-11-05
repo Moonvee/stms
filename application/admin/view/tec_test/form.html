@@ -1,0 +1,5 @@
+<form class="mb-20" method="get" action="{:\\think\\Url::build($Request.action)}">
+    <input type="text" class="input-text" style="width:200px" placeholder="教师工号" name="tid" value="{$Request.param.tid}" >
+    <input type="text" onClick="WdatePicker()" id="logmin" class="input-text Wdate" name="riqi" value="{$Request.param.riqi}"  placeholder="测试日期" style="width:200px;">
+    <button type="submit" class="btn btn-success"><i class="Hui-iconfont">&#xe665;</i> 搜索</button>
+</form>

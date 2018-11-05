@@ -1,0 +1,64 @@
+﻿{extend name="template/base" /}
+{block name="title"}我的桌面{/block}
+{block name="content"}
+<div class="page-container">
+	<p class="f-20 text-success">
+		欢迎您使用{:lang('name-long')}&nbsp;{:lang('name-en-long')}
+		<span class="f-14">
+			&nbsp;&nbsp;{:lang('version')}
+		</span>
+	</p>
+	<p>
+		本次登录IP：{$current_login_ip} &nbsp;&nbsp;&nbsp;
+		本次登录时间：{$info.last_login_time|date='Y-m-d H:i:s',###} &nbsp;&nbsp;&nbsp;
+		本次登录地点：{$current_login_loc}
+	</p>
+  <table class="radius table table-border table-bordered table-bg mt-20">
+		<thead>
+			<tr>
+				<th colspan="2" scope="col">个人信息</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th width="30%">工号</th>
+				<td><span id="lbServerName">{$info.account}</span></td>
+			</tr>
+			<tr>
+				<td>姓名</td>
+				<td>{$info.realname}</td>
+			</tr>
+			<tr>
+				<td>学院</td>
+				<td>{$info.xueyuan}</td>
+			</tr>
+			<tr>
+				<td>手机号</td>
+				<td>{$info.mobile}</td>
+			</tr>
+			<tr>
+				<td>备注</td>
+				<td>{$info.remark}</td>
+			</tr>
+			<tr>
+				<td>登录次数</td>
+				<td>{$info.login_count}</td>
+			</tr>
+			<tr>
+				<td>上次登录时间</td>
+				<td>{$Think.session.last_login_time|date='Y-m-d H:i:s',###}</td>
+			</tr>
+			<tr>
+				<td>上次登录IP</td>
+				<td>{$last_login_ip}</td>
+			</tr>
+			<tr>
+				<td>上次登录地点</td>
+				<td>{$last_login_loc}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+{include file="template/copyright" /}
+
+{/block}

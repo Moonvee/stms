@@ -1,0 +1,44 @@
+{extend name="template/base" /}
+{block name="content"}
+<div class="page-container">
+    {include file="form" /}
+    <div class="cl pd-5 bg-1 bk-gray">
+        <span class="l">
+            {tp:menu menu="add,delete,recyclebin" /}
+        </span>
+        <span class="r pt-5 pr-5">
+            共有数据 ：<strong>{$count ?? '0'}</strong> 条
+        </span>
+    </div>
+    <table class="radius table table-border table-bordered table-hover table-bg mt-20">
+        <thead>
+        <tr class="text-c">
+            {include file="th" /}
+            <th width="100">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        {volist name="list" id="vo"}
+        <tr class="text-c">
+            {include file="td" /}
+            <td class="f-14">
+                {tp:menu menu='sedit' /}
+                {tp:menu menu='sdelete' /}
+            </td>
+        </tr>
+        {/volist}
+        </tbody>
+    </table>
+    <div class="cl pd-5 bg-1 bk-gray mt-20">
+        <span class="l">
+          <a href="javascript:;" onclick="" class="btn btn-warning radius ml-5">
+            <i class="Hui-iconfont">&#xe6a7;</i>
+            选择学年
+          </a>
+        </span>
+
+    </div>
+
+    <div class="page-bootstrap">{$page ?? ''}</div>
+</div>
+{/block}

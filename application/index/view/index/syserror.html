@@ -1,0 +1,13 @@
+{extend name="public/base" /} {block name="seo"}
+<title>{:lang('title')}</title>
+{/block} {block name='content'}
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> {:lang('index')}
+    <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);"
+        title="刷新">
+        <i class="Hui-iconfont">&#xe68f;</i>
+    </a>
+</nav>
+<div class="page-container">
+    <div class="Huialert Huialert-error"><i class="Hui-iconfont">&#xe6a6;</i>系统关闭中，无法预约</div>
+</div>
+{include file="public/copyright" /} {/block}

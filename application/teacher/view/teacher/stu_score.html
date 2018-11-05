@@ -1,0 +1,118 @@
+{extend name='public/base' /}
+
+{block name='seo' /}
+<title>{$title|default='标题'}</title>
+{/block}
+
+
+{block name='content' /}
+
+	<div class="page-container">
+
+    <table class="table table-border table-bordered table-bg mt-5 radius">
+      <thead>
+        <tr>
+          <th colspan="2" scope="col">成绩查询</th>
+        </tr>
+      </thead>
+				{volist name="scoreList" id="vo"}
+      <tbody>
+        <tr>
+          <th width="30%">学号</th>
+          <td><span id="lbServerName">{$vo.sid}</span></td>
+        </tr>
+        <tr>
+          <th width="30%">姓名</th>
+          <td><span id="lbServerName">{$vo.name}</span></td>
+        </tr>
+        <tr>
+          <td>身高</td>
+          <td>{$vo.shengao} 厘米</td>
+        </tr>
+        <tr>
+          <td>体重</td>
+          <td>{$vo.tizhong} 千克</td>
+        </tr>
+        <tr>
+          <td>肺活量</td>
+          <td>{$vo.feihuoliang} 毫升</td>
+        </tr>
+        <tr>
+          <td>1000/800米跑</td>
+          <td>{$vo.lrun} (分/秒)</td>
+        </tr>
+        <tr>
+          <td>400米跑</td>
+          <td>{$vo.mrun} (分/秒)</td>
+        </tr>
+        <tr>
+          <td>50x8往返跑</td>
+          <td>{$vo.srun} (分/秒)</td>
+        </tr>
+        <tr>
+          <td>引体向上\仰卧起坐</td>
+          <td>{$vo.yintiyangwo} 次</td>
+        </tr>
+
+        <tr>
+          <td>坐位体前屈</td>
+          <td>{$vo.qianqu} 厘米</td>
+        </tr>
+        <tr>
+          <td>50米跑</td>
+          <td>{$vo.run50} 秒</td>
+        </tr>
+        <tr>
+          <td>立定跳远</td>
+          <td>{$vo.liding} 米</td>
+        </tr>
+        <tr>
+          <td>跳绳</td>
+          <td>{$vo.tiaosheng} 次/分</td>
+        </tr>
+				<tr>
+					<td>测试状态</td>
+					<td>{$vo.status}</td>
+				</tr>
+				{eq name="$vo.status" value="1"}
+				<tr>
+					<td>测试时间</td>
+					<td>{$vo.cssj}</td>
+				</tr>
+				{/eq}
+				{eq name="$vo.status" value="2"}
+				<tr>
+					<td>免测编号</td>
+					<td>{$vo.mcbh}</td>
+				</tr>
+				{/eq}
+      </tbody>
+			{/volist}
+
+			<thead>
+				<tr class="bg">
+					<th>体质建议</th>
+					{volist name="bmiList" id="bmi"}
+					<th>该学生的BMI为{$bmi.bmi}，属于{$bmi.bmic}，建议{$bmi.bmia}。</th>
+					{/volist}
+				</tr>
+				<tr>
+					<td colspan="2">
+						<form action="" target="_blank" method="post">
+							<button class="btn btn-success" type="submit">导出Excel</button>
+						</form>
+					</td>
+				</tr>
+			</thead>
+    </table>
+	</div>
+
+{/block}
+
+{block name='script'}
+<!--请在下方写此页面业务相关的脚本-->
+
+<!--/请在上方写此页面业务相关的脚本-->
+{/block}
+</body>
+</html>

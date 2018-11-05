@@ -1,0 +1,115 @@
+{extend name='public/base'/}
+{block name='header'}{/block} {//关掉头部}
+{block name='menu'}{/block} {//关掉菜单}
+{block name='seo'}
+<title>{$title|default="标题"}</title>
+<style media="screen">
+.passwordStrength{
+
+}
+.passwordStrength b{
+font-weight:normal;
+}
+.passwordStrength b,.passwordStrength span{
+display:inline-block;
+vertical-align:middle;
+line-height:16px;
+line-height:18px\9;
+height:16px;
+}
+.passwordStrength span{
+width:45px;
+text-align:center;
+background-color:#d0d0d0;
+border-right:1px solid #fff;
+}
+.passwordStrength .last{
+border-right:none;
+}
+.passwordStrength .bgStrength{
+color:#fff;
+background-color:#71b83d;
+}
+</style>
+{/block}
+
+{block name='content'}
+<article class="cl pd-20">
+
+	<form action="" method="post" class="form form-horizontal" id="form-class-edit">
+
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>原密码：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="password" class="input-text" value="" name="pw"  datatype="*6-18" errormsg="密码至少6个字符,最多18个字符！">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>新密码：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="password" class="input-text" value="" name="password"  plugin="passwordStrength"  datatype="*6-18" errormsg="密码至少6个字符,最多18个字符！">
+				<div class="passwordStrength">密码强度： <span>弱</span><span>中</span><span class="last">强</span></div>
+
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>重复新密码：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="password" class="input-text" value="" name="repassword"  datatype="*6-18" errormsg="密码至少6个字符,最多18个字符！" recheck="password" >
+			</div>
+		</div>
+
+		<!--将当前记录的id做为隐藏域发送到服务器-->
+		<input type="hidden" value="{:session('tec_id')}" name="id">
+
+		<div class="row cl">
+			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+				<input class="btn btn-primary radius disabled" type="button" value="&nbsp;&nbsp;提&nbsp;&nbsp;交&nbsp;&nbsp;" id="submit" >
+			</div>
+		</div>
+	</form>
+
+
+</article>
+{/block}
+
+{block name='script'}
+<!--请在下方写此页面业务相关的脚本-->
+{load href="__LIB__/Validform/5.3.2/passwordStrength-min.js"/}
+
+<script>
+	$(function(){
+		$("#form-class-edit").Validform({
+			tiptype:2,
+			usePlugin:{
+				passwordstrength:{
+					minLen:6,
+					maxLen:18
+				}
+			}
+		});
+
+	    $("form").children().change(function(){
+	        $("#submit").removeClass('disabled');
+		});
+        $("#submit").on("click", function(event){
+            $.ajax({
+							type: "POST",
+							url: "{:url('teacher/doPw')}",
+							data: $("#form-class-edit").serialize(),
+							dataType: "json",
+							success: function(data){
+				    		if (data.status == 1) {
+									layer.msg(data.message, {icon: 6,time:1000});
+								} else {
+									layer.msg(data.message, {icon: 5,time:1000});
+								}
+							}
+					});
+				});
+	})
+</script>
+{/block}
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+{extend name='public/base' /}
+
+{block name='seo' /}
+<title>{$title|default='标题'}</title>
+{/block}
+
+
+{block name='content' /}
+
+	<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> {:lang('index')}
+		<span class="c-gray en">&gt;</span>{:lang('tecinfo')}
+		<span class="c-gray en">&gt;</span>{:lang('tec-info')} <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" >
+		<i class="Hui-iconfont">&#xe68f;</i>
+		</a>
+	 </nav>
+	<div class="page-container">
+    <table class="table table-border table-bordered table-bg mt-5 radius">
+      <thead>
+        <tr>
+          <th colspan="2" scope="col">个人信息</th>
+        </tr>
+      </thead>
+				{volist name="teacherList" id="vo"}
+      <tbody>
+        <tr>
+          <th width="30%">学号</th>
+          <td><span id="lbServerName">{$vo.tid}</span></td>
+        </tr>
+        <tr>
+          <td>姓名</td>
+          <td>{$vo.name}</td>
+        </tr>
+        <tr>
+          <td>校区</td>
+          <td>{$vo.xiaoqu}</td>
+        </tr>
+        <tr>
+          <td>学院</td>
+          <td>{$vo.xueyuan}</td>
+        </tr>
+        <tr>
+          <td>电话</td>
+          <td>{$vo.phone}</td>
+        </tr>
+        <tr>
+          <td>邮箱</td>
+          <td>{$vo.email}</td>
+        </tr>
+
+      </tbody>
+			{/volist}
+    </table>
+    <div class="cl pd-5 bg-1 bk-gray mt-10">
+      <span class="l">
+        <a href="javascript:;" onclick="infoEdit('申请修改','{:url("teacher/infoEdit")}','800','600')" class="btn btn-primary radius" title="暂未提供修改功能">
+        <i class="Hui-iconfont">&#xe6df;</i> 申请修改</a>
+      </span>
+
+      <span class="l  ml-20">
+        <a href="javascript:;" onclick="infoEdit('修改密码','{:url("teacher/pwEdit")}','800','600')" class="btn btn-primary radius">
+        <i class="Hui-iconfont">&#xe6df;</i> 密码修改</a>
+      </span>
+    </div>
+	</div>
+
+{/block}
+
+
+{block name='script'}
+<!--请在下方写此页面业务相关的脚本-->
+
+<!--/请在上方写此页面业务相关的脚本-->
+{/block}
+</body>
+</html>

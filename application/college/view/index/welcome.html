@@ -1,0 +1,45 @@
+{extend name="public/base" /}
+
+{block name="seo"}
+<title>{:lang('title')}</title>
+{/block}
+{block name='content'}
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> {:lang('index')}
+	<a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" >
+	<i class="Hui-iconfont">&#xe68f;</i>
+	</a>
+ </nav>
+<div class="page-container">
+	<p class="f-20 text-success">欢迎您使用{:lang('name-long')}&nbsp;{:lang('name-en-long')}<span class="f-14">&nbsp;&nbsp;&nbsp;{:lang('version')}</span></p>
+	<table class="table table-border table-bordered table-bg mt-20">
+		<thead>
+			<tr>
+				<th colspan="2" scope="col">个人信息</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th width="30%">账号</th>
+				<td><span id="lbServerName">{:session('col_info.xid')}</span></td>
+			</tr>
+			<tr>
+				<td>姓名</td>
+				<td>{:session('col_info.name')}</td>
+			</tr>
+			<tr>
+				<td>校区</td>
+				<td>{:session('col_info.xiaoqu')}</td>
+			</tr>
+			<tr>
+				<td>学院</td>
+				<td>{:session('col_info.xueyuan')}</td>
+			</tr>
+			<tr>
+				<td>上次登录时间</td>
+				<td>{:date("Y-m-d H:i:s",$Think.session.col_info.login_time)}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+{include file="public/copyright" /}
+{/block}

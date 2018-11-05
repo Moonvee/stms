@@ -1,0 +1,35 @@
+{extend name="template/base" /}
+{block name="content"}
+<div class="page-container">
+
+    <div class="cl pd-5 bg-1 bk-gray">
+        <span class="l">
+            {tp:menu menu="add" /}
+        </span>
+        <span class="r pt-5 pr-5">
+            共有数据 ：<strong>{$count ?? '0'}</strong> 条
+        </span>
+    </div>
+    <table class="table table-border table-bordered table-hover table-bg mt-20">
+      {volist name="workInfo" id="vo"}
+            <tr class="text-c"><th width="150">学号</th><td>{$vo.account}</td></tr>
+            <tr class="text-c"><th width="150">目前就业单位</th><td>{$vo.danwei}</td></tr>
+            <tr class="text-c"><th width="150">工作性质</th><td>{$vo.xingzhi}</td></tr>
+            <tr class="text-c"><th width="150">工资待遇</th><td>{$vo.daiyu}</td></tr>
+            <tr class="text-c"><th width="150">理想就业方向</th><td>{$vo.fangxiang}</td></tr>
+            <tr class="text-c"><th width="150">意向工作地区</th><td>{$vo.yixiang}</td></tr>
+         {if condition="$vo.account eq '数据库中不存在'"}
+          {else /}
+            <tr class="text-c">
+              <th width="150">操作</th>
+              <td class="f-14">
+                {tp:menu menu='sedit' /}
+                {tp:menu menu='sdeleteforever' /}
+              </td>
+            </tr>
+          {/if}
+        {/volist}
+    </table>
+    <div class="page-bootstrap">{$page ?? ''}</div>
+</div>
+{/block}

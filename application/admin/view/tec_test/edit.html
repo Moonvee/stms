@@ -1,0 +1,81 @@
+{extend name="template/base" /}
+{block name="content"}
+<div class="page-container">
+    <form class="form form-horizontal" id="form" method="post" action="{:\\think\\Request::instance()->baseUrl()}">
+        <input type="hidden" name="id" value="{$vo.id ?? ''}">
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>教师工号：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" placeholder="教师工号" name="tid" value="{$vo.tid ?? ''}"  datatype="*" nullmsg="请填写教师工号">
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">测试日期：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+              <input type="text" onClick="WdatePicker()" id="logmin" class="input-text Wdate" name="riqi" value="{$Request.param.riqi}"  placeholder="测试日期" style="width:200px;" datatype="*" nullmsg="请填写教师日期">
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">节次：</label>
+
+            <div class="formControls col-xs-6 col-sm-6">
+              {include file="template/jieci" /}
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">人数：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" placeholder="人数(初次添加为0)" name="renshu" value="{$vo.renshu ?? ''}" >
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">测试状态：</label>
+            <div class="formControls col-xs-6 col-sm-6 skin-minimal">
+                <div class="radio-box">
+                    <input type="radio" name="status" id="status-1" value="1">
+                    <label for="status-1">启用</label>
+                </div>
+                <div class="radio-box">
+                    <input type="radio" name="status" id="status-0" value="0" checked>
+                    <label for="status-0">禁用</label>
+                </div>
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                <button type="submit" class="btn btn-primary radius disabled" id="submit">&nbsp;&nbsp;提交&nbsp;&nbsp;</button>
+                <button type="button" class="btn btn-default radius ml-20" onClick="layer_close();">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+            </div>
+        </div>
+    </form>
+</div>
+{/block}
+{block name="script"}
+<script type="text/javascript" src="__LIB__/Validform/5.3.2/Validform.min.js"></script>
+<script>
+    $(function () {
+        $("[name='status'][value='{$vo.status ?? ''}']").prop("checked", true);
+
+        $('.skin-minimal input').iCheck({
+            checkboxClass: 'icheckbox-blue',
+            radioClass: 'iradio-blue',
+            increaseArea: '20%'
+        });
+
+        $("#form").Validform({
+            tiptype: 2,
+            ajaxPost: true,
+            showAllError: true,
+            callback: function (ret){
+                ajax_progress(ret);
+            }
+        });
+    })
+</script>
+{/block}

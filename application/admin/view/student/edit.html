@@ -1,0 +1,112 @@
+{extend name="template/base" /}
+{block name="nav"}{/block}
+{block name="content"}
+<div class="page-container">
+    <form class="form form-horizontal" id="form" method="post" action="{:\\think\\Request::instance()->baseUrl()}">
+        <input type="hidden" name="id" value="{$vo.id ?? ''}">
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>学号：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" {present name="vo.sid"} value="{$vo.sid}" readonly {else /}  placeholder="学号只能是数字" name="sid" datatype="n" nullmsg="请填写学号" errormsg="学号只能是数字" {/present}>
+            </div>
+            <div class="col-xs-3 col-sm-3">{present name="vo.sid"}<span class="label label-warning radius">不可更改</span>{/present}</div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>密码：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="password" class="input-text" placeholder="请填写6-32位任意字符" value="{$vo.password ?? ''}" name="password" datatype="/^[\w\W]{6,32}$/" nullmsg="请填写密码" errormsg="请填写6-32位任意字符">
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>姓名：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" value="{$vo.name ?? ''}" placeholder="请填写姓名" name="name" datatype="*" nullmsg="请填写姓名">
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>性别：</label>
+            <div class="formControls col-xs-6 col-sm-6 skin-minimal">
+                <div class="radio-box">
+                    <input type="radio" name="sex" id="radio-0" value="男">
+                    <label for="radio-0">男</label>
+                </div>
+                <div class="radio-box">
+                    <input type="radio" name="sex" id="radio-1" value="女">
+                    <label for="radio-1">女</label>
+                </div>
+            </div>
+            <div class="col-xs-3 col-sm-3"> </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">民族：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+            {include file="template/minzu" /}
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">生日：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+              <input type="text" class="input-text Wdate" value="{$vo.shengri ?? ''}" onClick="WdatePicker()" name="shengri" placeholder="请填写生日" id="logmin"  datatype="*" nullmsg="请填写生日">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">身份证号：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <input type="text" class="input-text" value="{$vo.sfzh ?? ''}"  name="sfzh" placeholder="请填写身份证号" datatype="idcard" nullmsg="请填写身份证号" errormsg="身份证号格式错误" >
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">家庭地址：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+              <input type="text" class="input-text" name="dizhi" placeholder="请填写家庭地址" value="{$vo.dizhi ?? ''}"  datatype="*" nullmsg="请填写家庭地址">
+
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-3 col-sm-3">备注：</label>
+            <div class="formControls col-xs-6 col-sm-6">
+                <textarea class="textarea" placeholder="" name="beizhu" onKeyUp="textarealength(this,100)">{$vo.beizhu ?? ''}</textarea>
+                <p class="textarea-numberbar"><em class="textarea-length">0</em>/100</p>
+            </div>
+            <div class="col-xs-3 col-sm-3"></div>
+        </div>
+
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                <button type="submit" id="submit" class="btn btn-primary radius disabled">&nbsp;&nbsp;提交&nbsp;&nbsp;</button>
+                <button type="button" class="btn btn-default radius ml-20" onClick="layer_close();">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+            </div>
+        </div>
+    </form>
+</div>
+{/block}
+{block name="script"}
+<script type="text/javascript" src="__LIB__/Validform/5.3.2/Validform.min.js"></script>
+<script>
+    $(function () {
+      /* 单选按钮组初始化选中状态，可以设定默认值 */
+      $("[name='sex'][value='{$vo.sex ?? '男'}']").attr("checked",true);
+      /* 下拉框初始化选中状态，可以设定默认值 */
+       $("[name='minzu']").find("[value='{$vo.minzu ?? ''}']").attr("selected",true);
+
+      $('.skin-minimal input').iCheck({
+          checkboxClass: 'icheckbox-blue',
+          radioClass: 'iradio-blue',
+          increaseArea: '20%'
+      });
+
+        $("#form").Validform({
+            tiptype:2,
+            ajaxPost:true,
+            showAllError:true,
+            callback:function(ret){
+                ajax_progress(ret);
+            }
+        });
+    })
+</script>
+</script>
+{/block}

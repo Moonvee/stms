@@ -1,0 +1,31 @@
+{extend name='public/base' /}
+
+{block name='seo' /}
+<title>{$title|default='标题'}</title>
+{/block}
+
+
+{block name='content' /}
+
+	<div class="page-container">
+    <table class="table table-border table-bordered table-bg mt-5 radius">
+      <thead>
+        <tr>
+          <th colspan="2" scope="col">成绩查询</th>
+        </tr>
+      </thead>
+			<tr>
+				<td>您已免测，免测编号为{$mcbh}。</td>
+			</tr>
+    </table>
+	</div>
+
+{/block}
+
+{block name='script'}
+<!--请在下方写此页面业务相关的脚本-->
+
+<!--/请在上方写此页面业务相关的脚本-->
+{/block}
+</body>
+</html>

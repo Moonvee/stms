@@ -1,0 +1,109 @@
+{extend name='public/base' /}
+
+{block name='seo' /}
+<title>{$title|default='标题'}</title>
+{/block}
+
+
+{block name='content' /}
+
+	<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> {:lang('index')}
+		<span class="c-gray en">&gt;</span>{:lang('stuinfo')}
+		<span class="c-gray en">&gt;</span>{:lang('stu-info')} <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" >
+		<i class="Hui-iconfont">&#xe68f;</i>
+		</a>
+	 </nav>
+	<div class="page-container">
+    <table class="table table-border table-bordered table-bg mt-5 radius">
+      <thead>
+        <tr>
+          <th colspan="2" scope="col">个人信息</th>
+        </tr>
+      </thead>
+				{volist name="studentList" id="vo"}
+      <tbody>
+        <tr>
+          <th width="30%">学号</th>
+          <td><span id="lbServerName">{$vo.sid}</span></td>
+        </tr>
+        <tr>
+          <td>姓名</td>
+          <td>{$vo.name}</td>
+        </tr>
+        <tr>
+          <td>性别</td>
+          <td>{$vo.sex}</td>
+        </tr>
+        <tr>
+          <td>民族</td>
+          <td>{$vo.minzu}</td>
+        </tr>
+        <tr>
+          <td>身份证号</td>
+          <td>{$vo.sfzh}</td>
+        </tr>
+        <tr>
+          <td>校区</td>
+          <td>{$vo.xiaoqu}</td>
+        </tr>
+        <tr>
+          <td>学院</td>
+          <td>{$vo.xueyuan}</td>
+        </tr>
+        <tr>
+          <td>专业</td>
+          <td>{$vo.zhuanye}</td>
+        </tr>
+        <tr>
+          <td>班级</td>
+          <td>{$vo.banji}</td>
+        </tr>
+        <tr>
+          <td>在读状态</td>
+          <td>{$vo.zdzt}</td>
+        </tr>
+        <tr>
+          <td>入学时间</td>
+          <td>{$vo.ruxue}</td>
+        </tr>
+        <tr>
+          <td>学制</td>
+          <td>{$vo.xuezhi}</td>
+        </tr>
+        <tr>
+          <td>备注</td>
+          <td>{$vo.beizhu}</td>
+        </tr>
+
+      </tbody>
+			{/volist}
+    </table>
+    <div class="cl pd-5 bg-1 bk-gray mt-10">
+      <span class="l">
+        <a href="javascript:;" onclick="infoEdit('申请修改','{:url("student/infoEdit")}','800','600')" class="btn btn-primary radius" title="暂未提供修改功能">
+        <i class="Hui-iconfont">&#xe6df;</i> 申请修改</a>
+      </span>
+      <span class="l  ml-20">
+        <a href="javascript:;" onclick="infoEdit('修改密码','{:url("student/pwEdit")}','800','600')" class="btn btn-primary radius">
+        <i class="Hui-iconfont">&#xe6df;</i> 密码修改</a>
+      </span>
+    </div>
+	</div>
+
+{/block}
+
+
+{block name='script'}
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript">
+
+function infoEdit(title,url,w,h){
+	$.post(url);
+	layer_show(title,url,w,h);
+}
+
+</script>
+<!--/请在上方写此页面业务相关的脚本-->
+{/block}
+</body>
+</html>

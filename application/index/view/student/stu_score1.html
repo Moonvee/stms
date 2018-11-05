@@ -1,0 +1,69 @@
+{extend name='public/base' /}
+
+{block name='seo' /}
+<title>{$title|default='标题'}</title>
+{/block}
+
+
+{block name='content' /}
+
+	<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> {:lang('index')}
+		<span class="c-gray en">&gt;</span>{:lang('stutest')}
+		<span class="c-gray en">&gt;</span>{:lang('stu-score')} <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" >
+		<i class="Hui-iconfont">&#xe68f;</i>
+		</a>
+	 </nav>
+	<div class="page-container">
+    <table class="table table-border table-bordered table-bg radius">
+      <thead>
+        <tr>
+          <th scope="col" colspan="9">学期列表</th>
+        </tr>
+        <tr class="text-c">
+          <th width="50">序号</th>
+          <th width="100">学期</th>
+          <th width="100">状态</th>
+          <th width="100">操作</th>
+        </tr>
+      </thead>
+      <tbody>
+
+      {volist name="list" id="vo" key="k"}
+        <tr class="text-c">
+          <td>{$k}</td>
+          <td>{$vo.xuenian}</td>
+
+          <td class="td-status">  {//根据当前用户状态,设置启用样式}
+            {if condition="$vo.status eq '未测试'"}
+            <span class="label radius">{$vo.status}</span>
+            {else /}
+            <span class="label label-success radius">{$vo.status}</span>
+            {/if}
+          </td>
+          <td>
+            <button name="" id="" class="btn btn-success" type="post" onclick="scoreMake('成绩查询','{:url("student/scoreMake",["id"=>$vo["id"]])}','1','800','500')">
+              <i class="Hui-iconfont">&#xe665;</i> 查看成绩
+            </button>
+          </td>
+        </tr>
+      {/volist}
+
+      </tbody>
+    </table>
+	</div>
+
+{/block}
+
+{block name='script'}
+<!--请在下方写此页面业务相关的脚本-->
+
+<script>
+function scoreMake(title,url,id,w,h){
+    $.get(url,{id:id}); //执行控制器中的编辑操作
+	layer_show(title,url,w,h);
+}
+</script>
+<!--/请在上方写此页面业务相关的脚本-->
+{/block}
+</body>
+</html>

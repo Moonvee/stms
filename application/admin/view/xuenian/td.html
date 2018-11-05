@@ -1,0 +1,8 @@
+<td><input type="checkbox" name="id[]" value="{$vo.id}"></td>
+<td>{$vo.xuenian}</td>
+{eq name="$vo.status" value="0"}
+<td><i class="Hui-iconfont">&#xe608;</i>未选中</td>
+{/eq}
+{eq name="$vo.status" value="1"}
+<td><i class="Hui-iconfont">&#xe676;</i>已选中</td>
+{/eq}

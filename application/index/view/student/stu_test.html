@@ -1,0 +1,122 @@
+{extend name='public/base' /}
+
+{block name='seo' /}
+<title>{$title|default='标题'}</title>
+
+{/block}
+
+{block name='content' /}
+
+	<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> {:lang('index')}
+		<span class="c-gray en">&gt;</span>{:lang('stutest')}
+		<span class="c-gray en">&gt;</span>{:lang('stu-test')} <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" >
+		<i class="Hui-iconfont">&#xe68f;</i>
+		</a>
+	 </nav>
+	<div class="page-container">
+			<table class="table table-border table-bordered table-bg radius">
+				<thead>
+					<tr>
+						<th scope="col" colspan="13">选课列表</th>
+					</tr>
+					<tr class="text-c">
+						<th width="20">序号</th>
+						<th width="40">教师姓名</th>
+						<th width="100">校区</th>
+						<th width="100">学院</th>
+						<th width="50">日期</th>
+						<th width="50">节次</th>
+						<th width="50">男生人数</th>
+						<th width="50">女生人数</th>
+						<th width="50">课容量</th>
+						<th width="50">剩余男生容量</th>
+						<th width="50">剩余女生容量</th>
+						<th width="50">状态</th>
+						<th width="100">操作</th>
+					</tr>
+				</thead>
+				<tbody>
+
+				{volist name="testList" id="vo" key="k"}
+					<tr class="text-c">
+						<td>{$k}</td>
+						<td>{$vo.name}</td>
+						<td>{$vo.xiaoqu}</td>
+						<td>{$vo.xueyuan}</td>
+						<td>{$vo.riqi}</td>
+						<td>{$vo.jieci}</td>
+						<td>{$vo.rsman}</td>
+						<td>{$vo.rswomen}</td>
+						<td>{$vo.rongliang}</td>
+						<td>{$vo.krlman}</td>
+						<td>{$vo.krlwomen}</td>
+						<td class="td-status">  {//根据当前用户状态,设置启用样式}
+							{if condition="$vo.status eq '已测试'"}
+							<span class="label label-success radius">{$vo.status}</span>
+							{else /}
+							<span class="label radius">{$vo.status}</span>
+							{/if}
+						</td>
+						<td>
+							{if condition="$vo.select eq '1'"}
+							<button name="" id="" class="btn btn-success disabled" type="post">
+								<i class="Hui-iconfont">&#xe676;</i> 已预约
+							</button>
+							<button name="" id="" class="btn btn-warning quxiao" type="post" href="javascript:;" onclick="test_delete(this,{$vo.id})">
+								<i class="Hui-iconfont">&#xe60b;</i> 取消预约
+							</button>
+							{/if}
+							{if condition="$vo.select eq '2'"}
+							<button name="" id="" class="btn btn-warning" disabled>
+								 <i class="Hui-iconfont">&#xe6a6;</i> 课容量满
+							</button>
+							{/if}
+
+							{if condition="$vo.select eq '0'"}
+							<button name="" id="" class="btn btn-success yuyue" type="post" href="javascript:;" onclick="test_select(this,{$vo.id})">
+								<i class="Hui-iconfont">&#xe6a7;</i> 预约测试
+							</button>
+							{/if}
+
+						</td>
+					</tr>
+				{/volist}
+
+				</tbody>
+			</table>
+			<div class="page-bootstrap">
+			</div>
+	</div>
+
+{/block}
+
+
+{block name='script'}
+<!--请在下方写此页面业务相关的脚本-->
+
+<script type="text/javascript">
+function test_select(obj,id){
+	$('.yuyue').addClass('disabled');
+		
+	layer.confirm('确认要选择吗？',function(index){
+		//此处请求后台程序，下方是成功后的前台处理……
+		$.get("{:url('student/testSelect')}",{id:id});
+		layer.msg('请在页面刷新后查看预约结果！', { icon: 6});
+		window.setTimeout("location.replace(location.href)", 2000);
+	});
+}
+function test_delete(obj,id){
+	$(".quxiao").addClass('disabled');
+	layer.confirm('确认要取消吗？',function(index){
+		//此处请求后台程序，下方是成功后的前台处理……
+    	$.get("{:url('student/testDelete')}",{id:id});
+
+		layer.msg('已取消!', {icon: 5});
+		location.replace(location.href);
+	});
+}
+</script>
+<!--/请在上方写此页面业务相关的脚本-->
+{/block}
+</body>
+</html>

@@ -1,0 +1,134 @@
+{extend name='public/base'/}
+{block name='header'}{/block} {//关掉头部}
+{block name='menu'}{/block} {//关掉菜单}
+{block name='seo'}
+<title>{$title|default="标题"}</title>
+{/block}
+
+{block name='content'}
+<article class="cl pd-20">
+
+	<form id="form" action="" method="post" class="form form-horizontal" id="form-class-edit">
+
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>学号：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text " value="{$stu_info.sid}" id="sid" name="sid" >
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>姓名：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text " value="{$stu_info.name}" id="name" name="name" >
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>性别：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text " value="{$stu_info.sex}" id="sex" name="sex" >
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>民族：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text " value="{$stu_info.minzu}" id="minzu" name="minzu" >
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>身份证号：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text " value="{$stu_info.sfzh}" id="sfzh" name="sfzh" >
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>校区：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text " value="{$stu_info.xiaoqu}" id="xiaoqu" name="xiaoqu">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>学院：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text " value="{$stu_info.xueyuan}" id="xueyuan" name="xueyuan">
+			</div>
+		</div>
+
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>专业：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text " value="{$stu_info.zhuanye}" id="zhuanye" name="zhuanye">
+			</div>
+		</div>
+
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>班级：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text " value="{$stu_info.banji}" id="banji" name="banji">
+			</div>
+		</div>
+
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">在读状态：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text " value="{$stu_info.zdzt}" id="zdzt" name="zdzt">
+			</div>
+		</div>
+
+
+
+		<!--将当前记录的id做为隐藏域发送到服务器-->
+		<input type="hidden" value="{$stu_info.id}" name="id">
+
+		<div class="row cl">
+			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+				<input class="btn btn-primary radius disabled" type="button" value="&nbsp;&nbsp;提&nbsp;&nbsp;交&nbsp;&nbsp;" id="submit">
+			</div>
+		</div>
+	</form>
+
+
+</article>
+{/block}
+
+{block name='script'}
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="__LIB__/jquery.validation/1.14.0/jquery.validate.js"></script>
+<script type="text/javascript" src="__LIB__/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript" src="__LIB__/jquery.validation/1.14.0/messages_zh.js"></script>
+
+
+<script>
+	$(function () {
+		$("#form").children().change(function () {
+			$("#submit").removeClass('disabled');
+		});
+
+
+		$("#submit").on("click", function (event) {
+			$.ajax({
+				type: "POST",
+				url: "{:url('student/doInfoEdit')}",
+				data: $("#form-class-edit").serialize(),
+				dataType: "json",
+				success: function (data) {
+					if (data.status == 1) {
+						layer.msg(data.message, {
+							icon: 5,
+							time: 1000
+						});
+					} else {
+						layer.msg(data.message, {
+							icon: 6,
+							time: 1000
+						});
+					}
+				}
+			});
+		});
+	})
+</script>
+{/block}
+
+</body>
+
+</html>
