@@ -1,6 +1,7 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:86:"/Users/moonvee/Project/website/Stms/public/../application/teacher/view/user/login.html";i:1538444366;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:86:"/Users/moonvee/Project/website/Stms/public/../application/teacher/view/user/login.html";i:1541406265;}*/ ?>
 <!DOCTYPE>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="renderer" content="webkit|ie-comp|ie-stand">
@@ -22,6 +23,7 @@
 	</style>
 
 </head>
+
 <body class="denglu">
   <div class="dl">
 		<div class="biaoti">
@@ -72,7 +74,6 @@
 
 <script type="text/javascript" src="__LIB__/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="__LIB__/layer/2.4/layer.js"></script>
-<!-- <script type="text/javascript" src="__LIB__/Validform/5.3.2/Validform.min.js"></script> -->
 <script type="text/javascript" src="__ADMIN__/js/login.js"></script>
 <script>
   $(function(){

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:92:"/Users/moonvee/Project/website/Stms/public/../application/teacher/view/teacher/stu_list.html";i:1540983523;s:87:"/Users/moonvee/Project/website/Stms/public/../application/teacher/view/public/base.html";i:1535183414;s:87:"/Users/moonvee/Project/website/Stms/public/../application/teacher/view/public/meta.html";i:1536912251;s:89:"/Users/moonvee/Project/website/Stms/public/../application/teacher/view/public/footer.html";i:1540802237;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:92:"/Users/moonvee/Project/website/Stms/public/../application/teacher/view/teacher/stu_list.html";i:1541124656;s:87:"/Users/moonvee/Project/website/Stms/public/../application/teacher/view/public/base.html";i:1535183414;s:87:"/Users/moonvee/Project/website/Stms/public/../application/teacher/view/public/meta.html";i:1536912251;s:89:"/Users/moonvee/Project/website/Stms/public/../application/teacher/view/public/footer.html";i:1540802237;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -30,7 +30,7 @@
 
 <title><?php echo (isset($title) && ($title !== '')?$title:'标题'); ?></title>
 <style>
-	.pagination {
+.pagination {
 margin-top: 10px;
 margin-bottom: 10px;
 }
@@ -179,7 +179,8 @@ border: 1px solid #ddd;
 		setCk('oid', id);
 		layer_show(title, url, w, h);
 	}
-	function edit_stu_score(title, url, w, h, id,sid) {
+
+	function edit_stu_score(title, url, w, h, id, sid) {
 		setCk('oid', id);
 		setCk('sid', sid);
 		layer_show(title, url, w, h);

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:91:"/Users/moonvee/Project/website/Stms/public/../application/teacher/view/teacher/pw_edit.html";i:1535183414;s:87:"/Users/moonvee/Project/website/Stms/public/../application/teacher/view/public/base.html";i:1535183414;s:87:"/Users/moonvee/Project/website/Stms/public/../application/teacher/view/public/meta.html";i:1536912251;s:89:"/Users/moonvee/Project/website/Stms/public/../application/teacher/view/public/footer.html";i:1536912227;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:91:"/Users/moonvee/Project/website/Stms/public/../application/teacher/view/teacher/pw_edit.html";i:1535183414;s:87:"/Users/moonvee/Project/website/Stms/public/../application/teacher/view/public/base.html";i:1535183414;s:87:"/Users/moonvee/Project/website/Stms/public/../application/teacher/view/public/meta.html";i:1536912251;s:89:"/Users/moonvee/Project/website/Stms/public/../application/teacher/view/public/footer.html";i:1540802237;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -109,17 +109,15 @@ background-color:#71b83d;
 
 <!--_footer 作为公共模版分离出去-->
 <script type="text/javascript" src="__LIB__/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript" src="__LIB__/layer/2.4/layer.js"></script>
 <script type="text/javascript" src="__STATIC__/h-ui/js/H-ui.min.js"></script>
 <script type="text/javascript" src="__STATIC__/h-ui.admin/js/H-ui.admin.js"></script>
 <script type="text/javascript" src="__STATIC__/h-ui.admin/js/other.js"></script>
-<script type="text/javascript" src="__LIB__/My97DatePicker/4.8/WdatePicker.js"></script>
+
+<script type="text/javascript" src="__LIB__/layer/2.4/layer.js"></script>
 <script type="text/javascript" src="__LIB__/datatables/1.10.0/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="__LIB__/laypage/1.2/laypage.js"></script>
 <script type="text/javascript" src="__LIB__/Validform/5.3.2/Validform.min.js"></script>
 <script type="text/javascript" src="__LIB__/jedate/src/jedate.js"></script>
-
-
 
  <!--/_footer 作为公共模版分离出去-->
 
